@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class EditTaskViewModel(private val dao: TaskDao, private val id: Long) : ViewModel() {
+class EditTaskViewModel(private val dao: TaskDao, id: Long) : ViewModel() {
     private val _navigateToList = MutableLiveData(false)
     val navigateToList: LiveData<Boolean> get() = _navigateToList
     val task = dao.get(id)
